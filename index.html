@@ -1,0 +1,1317 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aceites de Cannabis · Gaby</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Nunito:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0
+        }
+
+        :root {
+            --blanco: #ffffff;
+            --crema: #faf8f4;
+            --crema2: #f3efe8;
+            --verde: #2d7a3a;
+            --verde-claro: #e8f5eb;
+            --verde-acento: #4a9e5c;
+            --naranja: #d4601a;
+            --naranja-claro: #fdf0e8;
+            --gris-texto: #3a3a3a;
+            --gris-suave: #6b6b6b;
+            --gris-borde: #e0dbd2;
+            --oro: #b8892a;
+        }
+
+        html {
+            scroll-behavior: smooth
+        }
+
+        body {
+            font-family: 'Nunito', sans-serif;
+            background: var(--blanco);
+            color: var(--gris-texto);
+        }
+
+        /* NAV */
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: white;
+            border-bottom: 2px solid var(--verde);
+            padding: 16px 60px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+        }
+
+        .nav-logo {
+            font-family: 'Lora', serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--verde);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .nav-logo .leaf {
+            font-size: 1.4rem
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            list-style: none
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--gris-suave);
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: color .2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--verde)
+        }
+
+        .nav-cta {
+            background: var(--verde);
+            color: white;
+            border: none;
+            padding: 10px 24px;
+            border-radius: 25px;
+            font-family: 'Nunito', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 700;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background .2s, transform .2s;
+            display: inline-block;
+        }
+
+        .nav-cta:hover {
+            background: var(--verde-acento);
+            transform: translateY(-1px)
+        }
+
+        /* HERO */
+        .hero {
+            background: linear-gradient(135deg, var(--verde-claro) 0%, white 50%, var(--naranja-claro) 100%);
+            padding: 80px 60px 70px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            border-bottom: 1px solid var(--gris-borde);
+        }
+
+        .hero-left {}
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--verde);
+            color: white;
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            padding: 6px 16px;
+            border-radius: 20px;
+            margin-bottom: 24px;
+        }
+
+        .hero-badge .dot {
+            width: 7px;
+            height: 7px;
+            background: white;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                opacity: 1
+            }
+
+            50% {
+                opacity: .4
+            }
+        }
+
+        .hero-title {
+            font-family: 'Lora', serif;
+            font-size: clamp(2.2rem, 8vw, 3.2rem);
+            font-weight: 700;
+            color: var(--gris-texto);
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .hero-title em {
+            font-style: italic;
+            color: var(--verde);
+        }
+
+        .hero-desc {
+            font-size: 1.05rem;
+            font-weight: 400;
+            color: var(--gris-suave);
+            line-height: 1.8;
+            margin-bottom: 32px;
+            max-width: 480px;
+        }
+
+        .hero-highlight {
+            background: white;
+            border: 1px solid var(--gris-borde);
+            border-left: 4px solid var(--verde);
+            border-radius: 0 12px 12px 0;
+            padding: 16px 20px;
+            margin-bottom: 32px;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--verde);
+            font-style: italic;
+            font-family: 'Lora', serif;
+        }
+
+        .hero-ctas {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap
+        }
+
+        .btn-primary {
+            background: var(--verde);
+            color: white;
+            border: none;
+            padding: 14px 32px;
+            border-radius: 25px;
+            font-family: 'Nunito', sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background .2s, transform .2s;
+            display: inline-block;
+        }
+
+        .btn-primary:hover {
+            background: var(--verde-acento);
+            transform: translateY(-2px)
+        }
+
+        .btn-secondary {
+            background: transparent;
+            border: 2px solid var(--verde);
+            color: var(--verde);
+            padding: 14px 32px;
+            border-radius: 25px;
+            font-family: 'Nunito', sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background .2s, color .2s, transform .2s;
+            display: inline-block;
+        }
+
+        .btn-secondary:hover {
+            background: var(--verde-claro);
+            transform: translateY(-2px)
+        }
+
+        /* Productos en el hero */
+        .hero-right {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            align-items: flex-end;
+        }
+
+        .hero-product {
+            text-align: center;
+            flex: 1;
+        }
+
+        .hero-product img {
+            width: 100%;
+            max-width: 160px;
+            object-fit: contain;
+            filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.15));
+            transition: transform .3s;
+        }
+
+        .hero-product:hover img {
+            transform: translateY(-6px) scale(1.03)
+        }
+
+        .hero-product .prod-price {
+            display: inline-block;
+            background: var(--verde);
+            color: white;
+            font-family: 'Lora', serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            padding: 6px 18px;
+            border-radius: 20px;
+            margin-top: 12px;
+        }
+
+        .hero-product.kalamo .prod-price {
+            background: var(--verde-acento)
+        }
+
+        .hero-product.eco .prod-price {
+            background: var(--naranja)
+        }
+
+        .hero-product .prod-flag {
+            font-size: 0.8rem;
+            color: var(--gris-suave);
+            margin-top: 4px
+        }
+
+        /* STRIP CONDICIONES */
+        .strip {
+            background: var(--verde);
+            padding: 20px 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 48px;
+            flex-wrap: wrap;
+        }
+
+        .strip-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: white;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .strip-item .si-icon {
+            font-size: 1.2rem
+        }
+
+        .strip-sep {
+            width: 1px;
+            height: 24px;
+            background: rgba(255, 255, 255, 0.3)
+        }
+
+        /* SECCIÓN CONDICIONES */
+        .sec-conditions {
+            background: var(--crema);
+            padding: 80px 60px;
+            border-bottom: 1px solid var(--gris-borde);
+        }
+
+        .sec-center {
+            text-align: center;
+            margin-bottom: 56px
+        }
+
+        .sec-label {
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--verde);
+            margin-bottom: 12px;
+        }
+
+        .sec-title {
+            font-family: 'Lora', serif;
+            font-size: clamp(1.8rem, 3vw, 2.6rem);
+            font-weight: 700;
+            color: var(--gris-texto);
+            line-height: 1.3;
+        }
+
+        .sec-title em {
+            color: var(--verde);
+            font-style: italic
+        }
+
+        .sec-sub {
+            font-size: 1rem;
+            color: var(--gris-suave);
+            line-height: 1.7;
+            margin-top: 12px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .conditions-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .cond-card {
+            background: white;
+            border: 1px solid var(--gris-borde);
+            border-radius: 16px;
+            padding: 28px 24px;
+            text-align: center;
+            transition: transform .3s, box-shadow .3s;
+        }
+
+        .cond-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+        }
+
+        .cond-icon {
+            font-size: 2.2rem;
+            margin-bottom: 12px
+        }
+
+        .cond-name {
+            font-family: 'Lora', serif;
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--gris-texto);
+            margin-bottom: 6px;
+        }
+
+        .cond-desc {
+            font-size: 0.82rem;
+            font-weight: 400;
+            color: var(--gris-suave);
+            line-height: 1.6;
+        }
+
+        /* PRODUCTOS */
+        .sec-products {
+            padding: 80px 60px;
+            background: white;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            max-width: 1050px;
+            margin: 0 auto;
+        }
+
+        .pcard {
+            background: white;
+            border: 2px solid var(--gris-borde);
+            border-radius: 20px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: transform .3s, box-shadow .3s, border-color .3s;
+        }
+
+        .pcard:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 16px 48px rgba(0, 0, 0, 0.1);
+        }
+
+        .pcard.eco:hover {
+            border-color: var(--naranja)
+        }
+
+        .pcard.kalamo:hover {
+            border-color: var(--verde-acento)
+        }
+
+        /* Header coloreado de la tarjeta */
+        .pcard-header {
+            padding: 32px;
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            position: relative;
+        }
+
+        .pcard.eco .pcard-header {
+            background: var(--naranja-claro)
+        }
+
+        .pcard.kalamo .pcard-header {
+            background: var(--verde-claro)
+        }
+
+        .pcard-header img {
+            width: 110px;
+            object-fit: contain;
+            filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.12));
+            flex-shrink: 0;
+        }
+
+        .pcard-header-text {}
+
+        .pcard-origen {
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            margin-bottom: 6px;
+        }
+
+        .pcard.eco .pcard-origen {
+            color: var(--naranja)
+        }
+
+        .pcard.kalamo .pcard-origen {
+            color: var(--verde)
+        }
+
+        .pcard-name {
+            font-family: 'Lora', serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--gris-texto);
+            line-height: 1.2;
+            margin-bottom: 6px;
+        }
+
+        .pcard-tagline {
+            font-size: 0.85rem;
+            color: var(--gris-suave);
+            font-style: italic;
+        }
+
+        .price-big {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            font-family: 'Lora', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            padding: 8px 16px;
+            border-radius: 12px;
+            color: white;
+        }
+
+        .pcard.eco .price-big {
+            background: var(--naranja)
+        }
+
+        .pcard.kalamo .price-big {
+            background: var(--verde)
+        }
+
+        /* Cuerpo */
+        .pcard-body {
+            padding: 28px 28px 32px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            border-top: 1px solid var(--gris-borde);
+        }
+
+        .pcard-desc {
+            font-size: 0.95rem;
+            font-weight: 400;
+            color: var(--gris-suave);
+            line-height: 1.75;
+            margin-bottom: 24px;
+        }
+
+        /* Specs */
+        .specs {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+            border: 1px solid var(--gris-borde);
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 24px;
+        }
+
+        .spec-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 11px 16px;
+            font-size: 0.85rem;
+            border-bottom: 1px solid var(--gris-borde);
+        }
+
+        .spec-row:last-child {
+            border-bottom: none
+        }
+
+        .spec-row:nth-child(odd) {
+            background: var(--crema)
+        }
+
+        .sk {
+            color: var(--gris-suave);
+            font-weight: 400
+        }
+
+        .sv {
+            font-weight: 700;
+            color: var(--gris-texto)
+        }
+
+        .sv.verde {
+            color: var(--verde)
+        }
+
+        .sv.naranja {
+            color: var(--naranja)
+        }
+
+        .no-thc {
+            background: var(--verde-claro);
+            color: var(--verde);
+            border: 1px solid #b8dfc0;
+            font-size: 0.72rem;
+            font-weight: 700;
+            padding: 3px 10px;
+            border-radius: 6px;
+        }
+
+        /* Pago */
+        .pago-row {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .pago-chip {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            background: var(--crema2);
+            border: 1px solid var(--gris-borde);
+            border-radius: 20px;
+            padding: 7px 14px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--gris-texto);
+        }
+
+        /* Botón */
+        .pcard-foot {
+            padding-top: 20px;
+            border-top: 1px solid var(--gris-borde);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+        }
+
+        .entrega-badge {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--verde);
+        }
+
+        .btn-wa {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #25D366;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 20px;
+            font-family: 'Nunito', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 700;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background .2s, transform .2s;
+        }
+
+        .btn-wa:hover {
+            background: #1eb856;
+            transform: translateY(-2px)
+        }
+
+        /* SECCIÓN "DE LO ÚNICO..." */
+        .sec-frase {
+            background: var(--verde);
+            padding: 70px 60px;
+            text-align: center;
+        }
+
+        .frase-main {
+            font-family: 'Lora', serif;
+            font-size: clamp(1.6rem, 4vw, 2.8rem);
+            font-weight: 700;
+            color: white;
+            line-height: 1.4;
+            max-width: 720px;
+            margin: 0 auto 12px;
+        }
+
+        .frase-main em {
+            font-style: italic;
+            color: #a8e6b8;
+        }
+
+        .frase-sub {
+            font-size: 1rem;
+            font-weight: 400;
+            color: rgba(255, 255, 255, 0.75);
+        }
+
+        /* CONTACTO */
+        .sec-contact {
+            padding: 80px 60px;
+            background: var(--crema);
+            text-align: center;
+            border-top: 1px solid var(--gris-borde);
+        }
+
+        .contact-inner {
+            max-width: 700px;
+            margin: 0 auto
+        }
+
+        .contact-sub {
+            font-size: 1rem;
+            color: var(--gris-suave);
+            line-height: 1.75;
+            margin-top: 12px;
+            margin-bottom: 48px;
+        }
+
+        .contact-grid {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cbtn {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            background: white;
+            border: 2px solid var(--gris-borde);
+            border-radius: 16px;
+            padding: 18px 28px;
+            text-decoration: none;
+            color: var(--gris-texto);
+            transition: border-color .2s, transform .2s, box-shadow .2s;
+            min-width: 200px;
+        }
+
+        .cbtn:hover {
+            border-color: var(--verde);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(45, 122, 58, 0.12);
+        }
+
+        .cbtn .cico {
+            font-size: 1.8rem
+        }
+
+        .cbtn .cchan {
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--gris-suave);
+            margin-bottom: 3px;
+        }
+
+        .cbtn .cval {
+            font-family: 'Lora', serif;
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--gris-texto);
+        }
+
+        .mp-note {
+            margin-top: 28px;
+            font-size: 0.88rem;
+            color: var(--gris-suave);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            justify-content: center;
+        }
+
+        /* FOOTER */
+        footer {
+            background: var(--gris-texto);
+            padding: 36px 60px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .f-logo {
+            font-family: 'Lora', serif;
+            font-size: 1rem;
+            font-weight: 700;
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .f-mid {
+            font-size: 0.78rem;
+            color: rgba(255, 255, 255, 0.4);
+            text-align: center;
+            font-style: italic
+        }
+
+        .f-legal {
+            font-size: 0.7rem;
+            color: rgba(255, 255, 255, 0.3);
+            text-align: right;
+            max-width: 300px
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(16px)
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0)
+            }
+        }
+
+        @media(max-width:900px) {
+            nav {
+                padding: 12px 20px;
+                background: rgba(255, 255, 255, 0.95);
+                backdrop-filter: blur(8px);
+            }
+
+            .nav-logo {
+                font-size: 1.15rem;
+            }
+
+            .nav-links {
+                display: none
+            }
+
+            .nav-cta {
+                padding: 8px 18px;
+                font-size: 0.85rem;
+            }
+
+            .hero {
+                grid-template-columns: 1fr;
+                padding: 40px 20px 50px;
+                gap: 40px;
+                text-align: center;
+            }
+
+            .hero-badge {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero-desc {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero-highlight {
+                border-radius: 12px;
+                border-left: 1px solid var(--gris-borde);
+                border-top: 4px solid var(--verde);
+            }
+
+            .hero-ctas {
+                justify-content: center;
+            }
+
+            .hero-right {
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                /* Alineación central para que se vean parejas */
+                gap: 15px;
+            }
+
+            .hero-product {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                /* Centrar contenidos internamente */
+            }
+
+            .hero-product img {
+                max-width: 140px;
+                height: 140px;
+                /* Alto fijo para uniformidad */
+                object-fit: contain;
+            }
+
+            .hero-product .prod-price {
+                font-size: 1.1rem;
+                padding: 5px 14px;
+            }
+
+            .strip {
+                padding: 15px 20px;
+                gap: 15px;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .strip-sep {
+                display: none;
+            }
+
+            .sec-conditions {
+                padding: 60px 20px
+            }
+
+            .conditions-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 16px;
+            }
+
+            .cond-card {
+                padding: 20px 15px;
+            }
+
+            .cond-icon {
+                font-size: 1.8rem;
+            }
+
+            .sec-products {
+                padding: 60px 20px
+            }
+
+            .products-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .pcard-header {
+                padding: 24px;
+                gap: 15px;
+            }
+
+            .pcard-header img {
+                width: 90px;
+            }
+
+            .price-big {
+                font-size: 1.3rem;
+                padding: 6px 12px;
+            }
+
+            .sec-frase {
+                padding: 50px 20px
+            }
+
+            .sec-contact {
+                padding: 60px 20px
+            }
+
+            .contact-grid {
+                flex-direction: column;
+            }
+
+            .cbtn {
+                width: 100%;
+                justify-content: center;
+            }
+
+            footer {
+                padding: 30px 20px;
+                flex-direction: column;
+                text-align: center;
+                gap: 20px;
+            }
+
+            .f-legal {
+                text-align: center;
+                max-width: 100%;
+            }
+        }
+
+        @media(max-width:500px) {
+            .conditions-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .pcard-header {
+                flex-direction: column;
+                text-align: center;
+                padding: 30px 20px;
+            }
+
+            .pcard-header img {
+                width: 120px;
+                margin-bottom: 10px;
+            }
+
+            .price-big {
+                position: relative;
+                top: 0;
+                right: 0;
+                display: inline-block;
+                margin-top: 15px;
+            }
+
+            .hero-right {
+                gap: 10px;
+                align-items: flex-start;
+                /* En pantallas muy chicas alineamos al inicio por el texto largo */
+            }
+
+            .hero-product img {
+                max-width: 100%;
+                height: 110px;
+                /* Ajuste para móviles muy pequeños */
+            }
+
+            .hero-product .prod-flag {
+                font-size: 0.75rem;
+                /* Letra un poco más chica para evitar saltos de línea feos */
+                line-height: 1.3;
+            }
+
+            .btn-primary,
+            .btn-secondary {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAV -->
+    <nav>
+        <div class="nav-logo">
+            <span class="leaf">🌿</span>
+            <!-- 💡 Cambiá el nombre si querés -->
+            Gaby · Aceites CBD
+        </div>
+        <ul class="nav-links">
+            <li><a href="#condiciones">Para qué sirve</a></li>
+            <li><a href="#productos">Productos</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+        <a href="#contacto" class="nav-cta">💬 Consultar</a>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-left">
+            <div class="hero-badge">
+                <span class="dot"></span>
+                Disponibles para entrega inmediata
+            </div>
+            <h1 class="hero-title">
+                Tratamiento natural<br>con <em>aceite medicinal</em><br>de cannabis
+            </h1>
+            <p class="hero-desc">
+                Aceites importados, sellados y certificados de laboratorios de Chile y Uruguay.
+                Con acompañamiento personalizado para encontrar el producto ideal para vos.
+            </p>
+            <div class="hero-highlight">
+                "De lo único que te vas a arrepentir... ¡es de no haber empezado antes!"
+            </div>
+            <div class="hero-ctas">
+                <a href="#productos" class="btn-primary">Ver productos y precios</a>
+                <a href="#condiciones" class="btn-secondary">¿Para qué sirve?</a>
+            </div>
+        </div>
+
+        <div class="hero-right">
+            <div class="hero-product eco">
+                <img src="imagenes/ECONatural.jpg" alt="ECONatural CBD 5%" />
+                <div class="prod-price">$ 10.000</div>
+                <div class="prod-flag">🇨🇱 Chile · 5% CBD</div>
+            </div>
+            <div class="hero-product kalamo">
+                <img src="imagenes/CALAMO.jpg" alt="Cálamo Regular" />
+                <div class="prod-price">$ 15.000</div>
+                <div class="prod-flag">🇺🇾 Uruguay · 0,7 mg/ml</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STRIP -->
+    <div class="strip">
+        <div class="strip-item"><span class="si-icon">📦</span> Importados y sellados</div>
+        <div class="strip-sep"></div>
+        <div class="strip-item"><span class="si-icon">🚀</span> Entrega inmediata</div>
+        <div class="strip-sep"></div>
+        <div class="strip-item"><span class="si-icon">💳</span> Efectivo y Mercado Pago</div>
+        <div class="strip-sep"></div>
+        <div class="strip-item"><span class="si-icon">⚖️</span> Venta legal · Ley 27.350</div>
+    </div>
+
+    <!-- CONDICIONES -->
+    <section class="sec-conditions" id="condiciones">
+        <div class="sec-center">
+            <p class="sec-label">Para qué sirve</p>
+            <h2 class="sec-title">¿Qué puede <em>aliviar</em> el aceite de cannabis?</h2>
+            <p class="sec-sub">El CBD actúa sobre el sistema endocannabinoide del cuerpo, ayudando a recuperar el
+                equilibrio natural</p>
+        </div>
+
+        <div class="conditions-grid">
+            <div class="cond-card">
+                <div class="cond-icon">😰</div>
+                <div class="cond-name">Ansiedad</div>
+                <div class="cond-desc">Reduce la sensación de nerviosismo, agitación y preocupación constante</div>
+            </div>
+            <div class="cond-card">
+                <div class="cond-icon">😔</div>
+                <div class="cond-name">Depresión</div>
+                <div class="cond-desc">Apoya el estado de ánimo y ayuda a encontrar el equilibrio emocional</div>
+            </div>
+            <div class="cond-card">
+                <div class="cond-icon">🌙</div>
+                <div class="cond-name">Insomnio</div>
+                <div class="cond-desc">Favorece el descanso profundo y un sueño más reparador y continuo</div>
+            </div>
+            <div class="cond-card">
+                <div class="cond-icon">🤯</div>
+                <div class="cond-name">Estrés</div>
+                <div class="cond-desc">Calma el sistema nervioso y baja la respuesta al estrés diario</div>
+            </div>
+            <div class="cond-card">
+                <div class="cond-icon">💥</div>
+                <div class="cond-name">Dolores</div>
+                <div class="cond-desc">Propiedades antiinflamatorias y analgésicas naturales para dolores crónicos</div>
+            </div>
+            <div class="cond-card">
+                <div class="cond-icon">⚡</div>
+                <div class="cond-name">Hiperactividad</div>
+                <div class="cond-desc">Ayuda a centrar la atención y reducir la agitación mental y física</div>
+            </div>
+            <div class="cond-card">
+                <div class="cond-icon">💛</div>
+                <div class="cond-name">Inestabilidad emocional</div>
+                <div class="cond-desc">Suaviza los cambios de humor y aporta mayor estabilidad interior</div>
+            </div>
+            <div class="cond-card">
+                <div class="cond-icon">🔋</div>
+                <div class="cond-name">Baja energía y desgano</div>
+                <div class="cond-desc">Ayuda a recuperar el ánimo, la motivación y la vitalidad del día a día</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRODUCTOS -->
+    <section class="sec-products" id="productos">
+        <div class="sec-center" style="margin-bottom:48px">
+            <p class="sec-label">Nuestros productos</p>
+            <h2 class="sec-title">Dos aceites, <em>dos concentraciones</em></h2>
+            <p class="sec-sub">Ambos importados, sellados y disponibles para entrega inmediata en todo el país</p>
+        </div>
+
+        <div class="products-grid">
+
+            <!-- ECONatural -->
+            <div class="pcard eco">
+                <div class="pcard-header">
+                    <img src="imagenes/ECONatural.jpg" alt="ECONatural CBD 5%" />
+                    <div class="pcard-header-text">
+                        <p class="pcard-origen">🇨🇱 ECONatural Laboratorios · Chile</p>
+                        <h3 class="pcard-name">Aceite CBD 5%</h3>
+                        <p class="pcard-tagline">Suplemento nutricional · Decarboxilado</p>
+                    </div>
+                    <div class="price-big">$ 10.000</div>
+                </div>
+
+                <div class="pcard-body">
+                    <p class="pcard-desc">
+                        Aceite de CBD de alta concentración, elaborado en Chile por ECONatural Laboratorios.
+                        Libre de THC y formulado como suplemento nutricional. Ideal para quienes buscan
+                        un efecto más marcado en ansiedad, dolores o insomnio severo.
+                    </p>
+
+                    <div class="specs">
+                        <div class="spec-row">
+                            <span class="sk">Concentración</span>
+                            <span class="sv naranja">5% CBD</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="sk">Contenido</span>
+                            <span class="sv">10 ml</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="sk">THC</span>
+                            <span class="sv"><span class="no-thc">✓ Sin THC</span></span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="sk">Tipo</span>
+                            <span class="sv">Decarboxilado</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="sk">Origen</span>
+                            <span class="sv">🇨🇱 Chile — Importado</span>
+                        </div>
+                    </div>
+
+                    <div class="pago-row">
+                        <div class="pago-chip">💵 Efectivo</div>
+                        <div class="pago-chip">📲 Mercado Pago</div>
+                    </div>
+
+                    <div class="pcard-foot">
+                        <div class="entrega-badge">🚀 Entrega inmediata</div>
+                        <!-- 💡 Cambiá el número de WhatsApp -->
+                        <a href="https://wa.me/54XXXXXXXXXX?text=Hola%20Gaby!%20Me%20interesa%20el%20aceite%20ECONatural%205%25%20CBD"
+                            class="btn-wa" target="_blank" rel="noopener">
+                            💬 Consultar
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- KÁLAMO -->
+            <div class="pcard kalamo">
+                <div class="pcard-header">
+                    <img src="imagenes/CALAMO.jpg" alt="Kálamo Regular" />
+                    <div class="pcard-header-text">
+                        <p class="pcard-origen">🇺🇾 Kálamo · Uruguay</p>
+                        <h3 class="pcard-name">Aceite de Cannabis Regular</h3>
+                        <p class="pcard-tagline">Full spectrum · 0,7 mg/ml CBD</p>
+                    </div>
+                    <div class="price-big">$ 15.000</div>
+                </div>
+
+                <div class="pcard-body">
+                    <p class="pcard-desc">
+                        Aceite de cannabis full spectrum producido en Uruguay. Vegano, orgánico,
+                        sin TACC y 100% natural. Contiene la gama completa de cannabinoides para
+                        potenciar el efecto séquito. Perfecto para iniciar un tratamiento suave y natural.
+                    </p>
+
+                    <div class="specs">
+                        <div class="spec-row">
+                            <span class="sk">Concentración</span>
+                            <span class="sv verde">0,7 mg/ml CBD</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="sk">Contenido</span>
+                            <span class="sv">10 ml</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="sk">Perfil</span>
+                            <span class="sv">Full spectrum</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="sk">Características</span>
+                            <span class="sv">Vegano · Orgánico · Sin TACC</span>
+                        </div>
+                        <div class="spec-row">
+                            <span class="sk">Origen</span>
+                            <span class="sv">🇺🇾 Uruguay — Importado</span>
+                        </div>
+                    </div>
+
+                    <div class="pago-row">
+                        <div class="pago-chip">💵 Efectivo</div>
+                        <div class="pago-chip">📲 Mercado Pago</div>
+                    </div>
+
+                    <div class="pcard-foot">
+                        <div class="entrega-badge">🚀 Entrega inmediata</div>
+                        <a href="https://wa.me/54XXXXXXXXXX?text=Hola%20Gaby!%20Me%20interesa%20el%20aceite%20K%C3%A1lamo%20Regular%20de%20Uruguay"
+                            class="btn-wa" target="_blank" rel="noopener">
+                            💬 Consultar
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FRASE -->
+    <section class="sec-frase">
+        <p class="frase-main">
+            "De lo único que te vas a arrepentir...
+            <em>¡es de no haber empezado antes!</em>"
+        </p>
+        <p class="frase-sub">Miles de personas ya encontraron alivio natural con el aceite de cannabis</p>
+    </section>
+
+    <!-- CONTACTO -->
+    <section class="sec-contact" id="contacto">
+        <div class="contact-inner">
+            <p class="sec-label">Contacto</p>
+            <h2 class="sec-title">¿Tenés dudas? <em>Escribime</em></h2>
+            <p class="contact-sub">
+                Te asesoro personalmente para encontrar el aceite que mejor se adapta
+                a lo que necesitás. Sin compromiso, con toda la información que precisás.
+            </p>
+
+            <div class="contact-grid">
+                <!-- 💡 Cambiá el número: 54 + código de área sin 0 + número sin 15 -->
+                <a href="https://wa.me/54XXXXXXXXXX" class="cbtn" target="_blank" rel="noopener">
+                    <span class="cico">💬</span>
+                    <div>
+                        <p class="cchan">WhatsApp</p>
+                        <p class="cval">+54 XX XXXX XXXX</p>
+                    </div>
+                </a>
+
+                <!-- 💡 Cambiá el usuario de Instagram -->
+                <a href="https://instagram.com/TU_USUARIO" class="cbtn" target="_blank" rel="noopener">
+                    <span class="cico">📸</span>
+                    <div>
+                        <p class="cchan">Instagram</p>
+                        <p class="cval">@tu_usuario</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="mp-note">
+                <span>💳</span>
+                <span>Acepto <strong>efectivo</strong> y <strong>Mercado Pago</strong></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="f-logo">🌿 Gaby · Aceites CBD</div>
+        <p class="f-mid">Importados · Sellados · Entrega inmediata · Argentina</p>
+        <p class="f-legal">Distribución legal bajo Ley 27.350. Consultá a tu médico antes de iniciar un tratamiento.</p>
+    </footer>
+
+</body>
+
+</html>
