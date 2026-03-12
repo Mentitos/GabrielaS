@@ -42,7 +42,6 @@
             color: var(--gris-texto);
         }
 
-        /* NAV */
         nav {
             position: sticky;
             top: 0;
@@ -100,7 +99,9 @@
             cursor: pointer;
             text-decoration: none;
             transition: background .2s, transform .2s;
-            display: inline-block;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
         }
 
         .nav-cta:hover {
@@ -108,7 +109,6 @@
             transform: translateY(-1px)
         }
 
-        /* HERO */
         .hero {
             background: linear-gradient(135deg, var(--verde-claro) 0%, white 50%, var(--naranja-claro) 100%);
             padding: 80px 60px 70px;
@@ -238,7 +238,6 @@
             transform: translateY(-2px)
         }
 
-        /* Productos en el hero */
         .hero-right {
             display: flex;
             gap: 20px;
@@ -289,7 +288,6 @@
             margin-top: 4px
         }
 
-        /* STRIP CONDICIONES */
         .strip {
             background: var(--verde);
             padding: 20px 60px;
@@ -319,7 +317,6 @@
             background: rgba(255, 255, 255, 0.3)
         }
 
-        /* SECCIÓN CONDICIONES */
         .sec-conditions {
             background: var(--crema);
             padding: 80px 60px;
@@ -405,7 +402,6 @@
             line-height: 1.6;
         }
 
-        /* PRODUCTOS */
         .sec-products {
             padding: 80px 60px;
             background: white;
@@ -442,7 +438,6 @@
             border-color: var(--verde-acento)
         }
 
-        /* Header coloreado de la tarjeta */
         .pcard-header {
             padding: 32px;
             display: flex;
@@ -519,7 +514,6 @@
             background: var(--verde)
         }
 
-        /* Cuerpo */
         .pcard-body {
             padding: 28px 28px 32px;
             flex: 1;
@@ -536,7 +530,6 @@
             margin-bottom: 24px;
         }
 
-        /* Specs */
         .specs {
             display: flex;
             flex-direction: column;
@@ -592,7 +585,6 @@
             border-radius: 6px;
         }
 
-        /* Pago */
         .pago-row {
             display: flex;
             gap: 10px;
@@ -613,7 +605,6 @@
             color: var(--gris-texto);
         }
 
-        /* Botón */
         .pcard-foot {
             padding-top: 20px;
             border-top: 1px solid var(--gris-borde);
@@ -654,7 +645,6 @@
             transform: translateY(-2px)
         }
 
-        /* SECCIÓN "DE LO ÚNICO..." */
         .sec-frase {
             background: var(--verde);
             padding: 70px 60px;
@@ -682,7 +672,6 @@
             color: rgba(255, 255, 255, 0.75);
         }
 
-        /* CONTACTO */
         .sec-contact {
             padding: 80px 60px;
             background: var(--crema);
@@ -760,7 +749,6 @@
             justify-content: center;
         }
 
-        /* FOOTER */
         footer {
             background: var(--gris-texto);
             padding: 36px 60px;
@@ -858,7 +846,6 @@
                 flex-direction: row;
                 justify-content: center;
                 align-items: center;
-                /* Alineación central para que se vean parejas */
                 gap: 15px;
             }
 
@@ -866,13 +853,11 @@
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                /* Centrar contenidos internamente */
             }
 
             .hero-product img {
                 max-width: 140px;
                 height: 140px;
-                /* Alto fijo para uniformidad */
                 object-fit: contain;
             }
 
@@ -989,18 +974,15 @@
             .hero-right {
                 gap: 10px;
                 align-items: flex-start;
-                /* En pantallas muy chicas alineamos al inicio por el texto largo */
             }
 
             .hero-product img {
                 max-width: 100%;
                 height: 110px;
-                /* Ajuste para móviles muy pequeños */
             }
 
             .hero-product .prod-flag {
                 font-size: 0.75rem;
-                /* Letra un poco más chica para evitar saltos de línea feos */
                 line-height: 1.3;
             }
 
@@ -1015,11 +997,9 @@
 
 <body>
 
-    <!-- NAV -->
     <nav>
         <div class="nav-logo">
             <span class="leaf">🌿</span>
-            <!-- 💡 Cambiá el nombre si querés -->
             Gaby · Aceites CBD
         </div>
         <ul class="nav-links">
@@ -1027,10 +1007,13 @@
             <li><a href="#productos">Productos</a></li>
             <li><a href="#contacto">Contacto</a></li>
         </ul>
-        <a href="#contacto" class="nav-cta">💬 Consultar</a>
+        <a href="#contacto" class="nav-cta"><svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em"
+                viewBox="0 0 24 24">
+                <path fill="currentColor"
+                    d="M19.05 4.91A9.816 9.816 0 0 0 12.04 2c-5.46 0-9.91 4.45-9.91 9.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91c0-2.65-1.03-5.14-2.85-7.01zm-7.01 15.24c-1.48 0-2.93-.4-4.2-1.15l-.3-.18l-3.12.82l.83-3.04l-.2-.31a8.264 8.264 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24c2.2 0 4.27.86 5.82 2.42a8.183 8.183 0 0 1 2.41 5.83c.02 4.54-3.68 8.23-8.22 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81c-.23-.08-.39-.12-.56.12c-.17.25-.64.81-.78.97c-.14.17-.29.19-.54.06c-.25-.12-1.05-.39-1.99-1.23c-.74-.66-1.23-1.47-1.38-1.72c-.14-.25-.02-.38.11-.51c.11-.11.25-.29.37-.43s.17-.25.25-.41c.08-.17.04-.31-.02-.43s-.56-1.34-.76-1.84c-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31c-.22.25-.86.85-.86 2.07c0 1.22.89 2.4 1.01 2.56c.12.17 1.75 2.67 4.23 3.74c.59.26 1.05.41 1.41.52c.59.19 1.13.16 1.56.1c.48-.07 1.47-.6 1.67-1.18c.21-.58.21-1.07.14-1.18s-.22-.16-.47-.28z" />
+            </svg> Consultar</a>
     </nav>
 
-    <!-- HERO -->
     <section class="hero">
         <div class="hero-left">
             <div class="hero-badge">
@@ -1067,7 +1050,6 @@
         </div>
     </section>
 
-    <!-- STRIP -->
     <div class="strip">
         <div class="strip-item"><span class="si-icon">📦</span> Importados y sellados</div>
         <div class="strip-sep"></div>
@@ -1078,7 +1060,6 @@
         <div class="strip-item"><span class="si-icon">⚖️</span> Venta legal · Ley 27.350</div>
     </div>
 
-    <!-- CONDICIONES -->
     <section class="sec-conditions" id="condiciones">
         <div class="sec-center">
             <p class="sec-label">Para qué sirve</p>
@@ -1131,7 +1112,6 @@
         </div>
     </section>
 
-    <!-- PRODUCTOS -->
     <section class="sec-products" id="productos">
         <div class="sec-center" style="margin-bottom:48px">
             <p class="sec-label">Nuestros productos</p>
@@ -1141,7 +1121,6 @@
 
         <div class="products-grid">
 
-            <!-- ECONatural -->
             <div class="pcard eco">
                 <div class="pcard-header">
                     <img src="imagenes/ECONatural.jpg" alt="ECONatural CBD 5%" />
@@ -1190,16 +1169,17 @@
 
                     <div class="pcard-foot">
                         <div class="entrega-badge">🚀 Entrega inmediata</div>
-                        <!-- 💡 Cambiá el número de WhatsApp -->
-                        <a href="https://wa.me/54XXXXXXXXXX?text=Hola%20Gaby!%20Me%20interesa%20el%20aceite%20ECONatural%205%25%20CBD"
+                        <a href="https://wa.me/5491158133775?text=Hola%20Gaby!%20Me%20interesa%20el%20aceite%20ECONatural%205%25%20CBD"
                             class="btn-wa" target="_blank" rel="noopener">
-                            💬 Consultar
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24">
+                                <path fill="currentColor"
+                                    d="M19.05 4.91A9.816 9.816 0 0 0 12.04 2c-5.46 0-9.91 4.45-9.91 9.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91c0-2.65-1.03-5.14-2.85-7.01zm-7.01 15.24c-1.48 0-2.93-.4-4.2-1.15l-.3-.18l-3.12.82l.83-3.04l-.2-.31a8.264 8.264 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24c2.2 0 4.27.86 5.82 2.42a8.183 8.183 0 0 1 2.41 5.83c.02 4.54-3.68 8.23-8.22 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81c-.23-.08-.39-.12-.56.12c-.17.25-.64.81-.78.97c-.14.17-.29.19-.54.06c-.25-.12-1.05-.39-1.99-1.23c-.74-.66-1.23-1.47-1.38-1.72c-.14-.25-.02-.38.11-.51c.11-.11.25-.29.37-.43s.17-.25.25-.41c.08-.17.04-.31-.02-.43s-.56-1.34-.76-1.84c-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31c-.22.25-.86.85-.86 2.07c0 1.22.89 2.4 1.01 2.56c.12.17 1.75 2.67 4.23 3.74c.59.26 1.05.41 1.41.52c.59.19 1.13.16 1.56.1c.48-.07 1.47-.6 1.67-1.18c.21-.58.21-1.07.14-1.18s-.22-.16-.47-.28z" />
+                            </svg> Consultar
                         </a>
                     </div>
                 </div>
             </div>
 
-            <!-- KÁLAMO -->
             <div class="pcard kalamo">
                 <div class="pcard-header">
                     <img src="imagenes/CALAMO.jpg" alt="Kálamo Regular" />
@@ -1248,9 +1228,12 @@
 
                     <div class="pcard-foot">
                         <div class="entrega-badge">🚀 Entrega inmediata</div>
-                        <a href="https://wa.me/54XXXXXXXXXX?text=Hola%20Gaby!%20Me%20interesa%20el%20aceite%20K%C3%A1lamo%20Regular%20de%20Uruguay"
+                        <a href="https://wa.me/5491158133775?text=Hola%20Gaby!%20Me%20interesa%20el%20aceite%20K%C3%A1lamo%20Regular%20de%20Uruguay"
                             class="btn-wa" target="_blank" rel="noopener">
-                            💬 Consultar
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24">
+                                <path fill="currentColor"
+                                    d="M19.05 4.91A9.816 9.816 0 0 0 12.04 2c-5.46 0-9.91 4.45-9.91 9.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91c0-2.65-1.03-5.14-2.85-7.01zm-7.01 15.24c-1.48 0-2.93-.4-4.2-1.15l-.3-.18l-3.12.82l.83-3.04l-.2-.31a8.264 8.264 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24c2.2 0 4.27.86 5.82 2.42a8.183 8.183 0 0 1 2.41 5.83c.02 4.54-3.68 8.23-8.22 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81c-.23-.08-.39-.12-.56.12c-.17.25-.64.81-.78.97c-.14.17-.29.19-.54.06c-.25-.12-1.05-.39-1.99-1.23c-.74-.66-1.23-1.47-1.38-1.72c-.14-.25-.02-.38.11-.51c.11-.11.25-.29.37-.43s.17-.25.25-.41c.08-.17.04-.31-.02-.43s-.56-1.34-.76-1.84c-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31c-.22.25-.86.85-.86 2.07c0 1.22.89 2.4 1.01 2.56c.12.17 1.75 2.67 4.23 3.74c.59.26 1.05.41 1.41.52c.59.19 1.13.16 1.56.1c.48-.07 1.47-.6 1.67-1.18c.21-.58.21-1.07.14-1.18s-.22-.16-.47-.28z" />
+                            </svg> Consultar
                         </a>
                     </div>
                 </div>
@@ -1259,7 +1242,6 @@
         </div>
     </section>
 
-    <!-- FRASE -->
     <section class="sec-frase">
         <p class="frase-main">
             "De lo único que te vas a arrepentir...
@@ -1268,7 +1250,6 @@
         <p class="frase-sub">Miles de personas ya encontraron alivio natural con el aceite de cannabis</p>
     </section>
 
-    <!-- CONTACTO -->
     <section class="sec-contact" id="contacto">
         <div class="contact-inner">
             <p class="sec-label">Contacto</p>
@@ -1279,21 +1260,15 @@
             </p>
 
             <div class="contact-grid">
-                <!-- 💡 Cambiá el número: 54 + código de área sin 0 + número sin 15 -->
-                <a href="https://wa.me/54XXXXXXXXXX" class="cbtn" target="_blank" rel="noopener">
-                    <span class="cico">💬</span>
+                <a href="https://wa.me/5491158133775" class="cbtn" target="_blank" rel="noopener">
+                    <span class="cico" style="color: #25D366;"><svg xmlns="http://www.w3.org/2000/svg" width="1.2em"
+                            height="1.2em" viewBox="0 0 24 24">
+                            <path fill="currentColor"
+                                d="M19.05 4.91A9.816 9.816 0 0 0 12.04 2c-5.46 0-9.91 4.45-9.91 9.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91c0-2.65-1.03-5.14-2.85-7.01zm-7.01 15.24c-1.48 0-2.93-.4-4.2-1.15l-.3-.18l-3.12.82l.83-3.04l-.2-.31a8.264 8.264 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24c2.2 0 4.27.86 5.82 2.42a8.183 8.183 0 0 1 2.41 5.83c.02 4.54-3.68 8.23-8.22 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81c-.23-.08-.39-.12-.56.12c-.17.25-.64.81-.78.97c-.14.17-.29.19-.54.06c-.25-.12-1.05-.39-1.99-1.23c-.74-.66-1.23-1.47-1.38-1.72c-.14-.25-.02-.38.11-.51c.11-.11.25-.29.37-.43s.17-.25.25-.41c.08-.17.04-.31-.02-.43s-.56-1.34-.76-1.84c-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31c-.22.25-.86.85-.86 2.07c0 1.22.89 2.4 1.01 2.56c.12.17 1.75 2.67 4.23 3.74c.59.26 1.05.41 1.41.52c.59.19 1.13.16 1.56.1c.48-.07 1.47-.6 1.67-1.18c.21-.58.21-1.07.14-1.18s-.22-.16-.47-.28z" />
+                        </svg></span>
                     <div>
                         <p class="cchan">WhatsApp</p>
-                        <p class="cval">+54 XX XXXX XXXX</p>
-                    </div>
-                </a>
-
-                <!-- 💡 Cambiá el usuario de Instagram -->
-                <a href="https://instagram.com/TU_USUARIO" class="cbtn" target="_blank" rel="noopener">
-                    <span class="cico">📸</span>
-                    <div>
-                        <p class="cchan">Instagram</p>
-                        <p class="cval">@tu_usuario</p>
+                        <p class="cval">+54 9 11 5813-3775</p>
                     </div>
                 </a>
             </div>
@@ -1305,7 +1280,6 @@
         </div>
     </section>
 
-    <!-- FOOTER -->
     <footer>
         <div class="f-logo">🌿 Gaby · Aceites CBD</div>
         <p class="f-mid">Importados · Sellados · Entrega inmediata · Argentina</p>
